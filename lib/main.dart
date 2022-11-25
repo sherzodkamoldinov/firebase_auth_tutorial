@@ -2,9 +2,14 @@ import 'package:firebase_auth_tutorial/screens/login_email_password_screen.dart'
 import 'package:firebase_auth_tutorial/screens/login_screen.dart';
 import 'package:firebase_auth_tutorial/screens/phone_screen.dart';
 import 'package:firebase_auth_tutorial/screens/signup_email_password_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
+  // init flutter widgets
+  WidgetsFlutterBinding.ensureInitialized();
+  // init firebase
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
